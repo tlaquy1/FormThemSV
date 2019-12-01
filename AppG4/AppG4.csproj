@@ -81,9 +81,13 @@
     <Compile Include="frmTinhToanCoBan.Designer.cs">
       <DependentUpon>frmTinhToanCoBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Diem.cs" />
     <Compile Include="Model\DiemVan.cs" />
     <Compile Include="Model\QTHT.cs" />
     <Compile Include="Model\SinhVien.cs" />
+    <Compile Include="Model\SinhVienCNTT.cs" />
+    <Compile Include="Model\SinhVienVAN.cs" />
+    <Compile Include="Model\SinhVienVL.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

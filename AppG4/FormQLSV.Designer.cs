@@ -45,11 +45,12 @@
             this.cậpNhậtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bỏCậpNhậtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.checkedListBoxSinhVien = new System.Windows.Forms.CheckedListBox();
             this.dataGridViewSinhVien = new System.Windows.Forms.DataGridView();
             this.bdsSinhVien = new System.Windows.Forms.BindingSource(this.components);
+            this.btnLuu = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLuuDiem = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,8 +59,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabVan = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtVanHocHD = new System.Windows.Forms.TextBox();
+            this.txtVanhocCD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabVatLi = new System.Windows.Forms.TabPage();
@@ -68,19 +69,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtVLHatNhan = new System.Windows.Forms.TextBox();
+            this.txtDien = new System.Windows.Forms.TextBox();
+            this.txtQuangHoc = new System.Windows.Forms.TextBox();
+            this.txtCoHoc = new System.Windows.Forms.TextBox();
             this.tabCNTT = new System.Windows.Forms.TabPage();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtSQL = new System.Windows.Forms.TextBox();
+            this.txtC = new System.Windows.Forms.TextBox();
+            this.txtPascal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonShow = new System.Windows.Forms.Button();
+            this.checkedListBoxCapNhatDiem = new System.Windows.Forms.CheckedListBox();
+            this.labelMSV = new System.Windows.Forms.Label();
+            this.txtMSV = new System.Windows.Forms.TextBox();
             this.sinhVienBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -107,7 +111,7 @@
             this.bỏCậpNhậtToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(653, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(898, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -203,6 +207,7 @@
             this.cậpNhậtToolStripMenuItem.Name = "cậpNhậtToolStripMenuItem";
             this.cậpNhậtToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.cậpNhậtToolStripMenuItem.Text = "Cập nhật";
+            this.cậpNhậtToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtToolStripMenuItem_Click);
             // 
             // bỏCậpNhậtToolStripMenuItem
             // 
@@ -212,23 +217,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.checkedListBoxSinhVien);
             this.panel1.Controls.Add(this.dataGridViewSinhVien);
             this.panel1.Location = new System.Drawing.Point(12, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(301, 388);
             this.panel1.TabIndex = 2;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(237, 175);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 7;
-            this.btnLuu.Text = "<<<<";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // checkedListBoxSinhVien
             // 
@@ -252,8 +246,20 @@
             this.dataGridViewSinhVien.Size = new System.Drawing.Size(302, 174);
             this.dataGridViewSinhVien.TabIndex = 1;
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(-11, 310);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.TabIndex = 7;
+            this.btnLuu.Text = "<<<<";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnLuuDiem);
+            this.panel2.Controls.Add(this.btnLuu);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.dateTimePickerNgaySinh);
             this.panel2.Controls.Add(this.label2);
@@ -265,6 +271,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(330, 387);
             this.panel2.TabIndex = 3;
+         
+            // 
+            // btnLuuDiem
+            // 
+            this.btnLuuDiem.Location = new System.Drawing.Point(266, 303);
+            this.btnLuuDiem.Name = "btnLuuDiem";
+            this.btnLuuDiem.Size = new System.Drawing.Size(75, 23);
+            this.btnLuuDiem.TabIndex = 8;
+            this.btnLuuDiem.Text = ">>>>";
+            this.btnLuuDiem.UseVisualStyleBackColor = true;
+            this.btnLuuDiem.Click += new System.EventHandler(this.btnLuuDiem_Click);
             // 
             // label13
             // 
@@ -331,8 +348,8 @@
             // 
             // tabVan
             // 
-            this.tabVan.Controls.Add(this.textBox3);
-            this.tabVan.Controls.Add(this.textBox2);
+            this.tabVan.Controls.Add(this.txtVanHocHD);
+            this.tabVan.Controls.Add(this.txtVanhocCD);
             this.tabVan.Controls.Add(this.label4);
             this.tabVan.Controls.Add(this.label3);
             this.tabVan.Location = new System.Drawing.Point(4, 22);
@@ -343,19 +360,19 @@
             this.tabVan.Text = "Văn";
             this.tabVan.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtVanHocHD
             // 
-            this.textBox3.Location = new System.Drawing.Point(121, 42);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.txtVanHocHD.Location = new System.Drawing.Point(121, 42);
+            this.txtVanHocHD.Name = "txtVanHocHD";
+            this.txtVanHocHD.Size = new System.Drawing.Size(100, 20);
+            this.txtVanHocHD.TabIndex = 4;
             // 
-            // textBox2
+            // txtVanhocCD
             // 
-            this.textBox2.Location = new System.Drawing.Point(121, 17);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtVanhocCD.Location = new System.Drawing.Point(121, 17);
+            this.txtVanhocCD.Name = "txtVanhocCD";
+            this.txtVanhocCD.Size = new System.Drawing.Size(100, 20);
+            this.txtVanhocCD.TabIndex = 4;
             // 
             // label4
             // 
@@ -382,10 +399,10 @@
             this.tabVatLi.Controls.Add(this.label5);
             this.tabVatLi.Controls.Add(this.label8);
             this.tabVatLi.Controls.Add(this.label7);
-            this.tabVatLi.Controls.Add(this.textBox5);
-            this.tabVatLi.Controls.Add(this.textBox4);
-            this.tabVatLi.Controls.Add(this.textBox7);
-            this.tabVatLi.Controls.Add(this.textBox6);
+            this.tabVatLi.Controls.Add(this.txtVLHatNhan);
+            this.tabVatLi.Controls.Add(this.txtDien);
+            this.tabVatLi.Controls.Add(this.txtQuangHoc);
+            this.tabVatLi.Controls.Add(this.txtCoHoc);
             this.tabVatLi.Location = new System.Drawing.Point(4, 22);
             this.tabVatLi.Name = "tabVatLi";
             this.tabVatLi.Padding = new System.Windows.Forms.Padding(3);
@@ -438,39 +455,39 @@
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 1;
             // 
-            // textBox5
+            // txtVLHatNhan
             // 
-            this.textBox5.Location = new System.Drawing.Point(125, 109);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 0;
+            this.txtVLHatNhan.Location = new System.Drawing.Point(125, 109);
+            this.txtVLHatNhan.Name = "txtVLHatNhan";
+            this.txtVLHatNhan.Size = new System.Drawing.Size(100, 20);
+            this.txtVLHatNhan.TabIndex = 0;
             // 
-            // textBox4
+            // txtDien
             // 
-            this.textBox4.Location = new System.Drawing.Point(125, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 0;
+            this.txtDien.Location = new System.Drawing.Point(125, 83);
+            this.txtDien.Name = "txtDien";
+            this.txtDien.Size = new System.Drawing.Size(100, 20);
+            this.txtDien.TabIndex = 0;
             // 
-            // textBox7
+            // txtQuangHoc
             // 
-            this.textBox7.Location = new System.Drawing.Point(125, 57);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 0;
+            this.txtQuangHoc.Location = new System.Drawing.Point(125, 57);
+            this.txtQuangHoc.Name = "txtQuangHoc";
+            this.txtQuangHoc.Size = new System.Drawing.Size(100, 20);
+            this.txtQuangHoc.TabIndex = 0;
             // 
-            // textBox6
+            // txtCoHoc
             // 
-            this.textBox6.Location = new System.Drawing.Point(125, 31);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 0;
+            this.txtCoHoc.Location = new System.Drawing.Point(125, 31);
+            this.txtCoHoc.Name = "txtCoHoc";
+            this.txtCoHoc.Size = new System.Drawing.Size(100, 20);
+            this.txtCoHoc.TabIndex = 0;
             // 
             // tabCNTT
             // 
-            this.tabCNTT.Controls.Add(this.textBox10);
-            this.tabCNTT.Controls.Add(this.textBox9);
-            this.tabCNTT.Controls.Add(this.textBox8);
+            this.tabCNTT.Controls.Add(this.txtSQL);
+            this.tabCNTT.Controls.Add(this.txtC);
+            this.tabCNTT.Controls.Add(this.txtPascal);
             this.tabCNTT.Controls.Add(this.label12);
             this.tabCNTT.Controls.Add(this.label11);
             this.tabCNTT.Controls.Add(this.label10);
@@ -482,26 +499,26 @@
             this.tabCNTT.Text = "CNTT";
             this.tabCNTT.UseVisualStyleBackColor = true;
             // 
-            // textBox10
+            // txtSQL
             // 
-            this.textBox10.Location = new System.Drawing.Point(115, 110);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 1;
+            this.txtSQL.Location = new System.Drawing.Point(115, 110);
+            this.txtSQL.Name = "txtSQL";
+            this.txtSQL.Size = new System.Drawing.Size(100, 20);
+            this.txtSQL.TabIndex = 1;
             // 
-            // textBox9
+            // txtC
             // 
-            this.textBox9.Location = new System.Drawing.Point(115, 74);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 1;
+            this.txtC.Location = new System.Drawing.Point(115, 74);
+            this.txtC.Name = "txtC";
+            this.txtC.Size = new System.Drawing.Size(100, 20);
+            this.txtC.TabIndex = 1;
             // 
-            // textBox8
+            // txtPascal
             // 
-            this.textBox8.Location = new System.Drawing.Point(115, 46);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 1;
+            this.txtPascal.Location = new System.Drawing.Point(115, 46);
+            this.txtPascal.Name = "txtPascal";
+            this.txtPascal.Size = new System.Drawing.Size(100, 20);
+            this.txtPascal.TabIndex = 1;
             // 
             // label12
             // 
@@ -542,13 +559,37 @@
             // 
             // buttonShow
             // 
-            this.buttonShow.Location = new System.Drawing.Point(656, 57);
+            this.buttonShow.Location = new System.Drawing.Point(656, 92);
             this.buttonShow.Name = "buttonShow";
             this.buttonShow.Size = new System.Drawing.Size(75, 23);
             this.buttonShow.TabIndex = 6;
             this.buttonShow.Text = "Show";
             this.buttonShow.UseVisualStyleBackColor = true;
             this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
+            // 
+            // checkedListBoxCapNhatDiem
+            // 
+            this.checkedListBoxCapNhatDiem.FormattingEnabled = true;
+            this.checkedListBoxCapNhatDiem.Location = new System.Drawing.Point(656, 146);
+            this.checkedListBoxCapNhatDiem.Name = "checkedListBoxCapNhatDiem";
+            this.checkedListBoxCapNhatDiem.Size = new System.Drawing.Size(230, 244);
+            this.checkedListBoxCapNhatDiem.TabIndex = 7;
+            // 
+            // labelMSV
+            // 
+            this.labelMSV.AutoSize = true;
+            this.labelMSV.Location = new System.Drawing.Point(656, 118);
+            this.labelMSV.Name = "labelMSV";
+            this.labelMSV.Size = new System.Drawing.Size(30, 13);
+            this.labelMSV.TabIndex = 9;
+            this.labelMSV.Text = "MSV";
+            // 
+            // txtMSV
+            // 
+            this.txtMSV.Location = new System.Drawing.Point(702, 116);
+            this.txtMSV.Name = "txtMSV";
+            this.txtMSV.Size = new System.Drawing.Size(184, 20);
+            this.txtMSV.TabIndex = 10;
             // 
             // sinhVienBindingSource2
             // 
@@ -558,7 +599,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 450);
+            this.ClientSize = new System.Drawing.Size(898, 450);
+            this.Controls.Add(this.txtMSV);
+            this.Controls.Add(this.labelMSV);
+            this.Controls.Add(this.checkedListBoxCapNhatDiem);
             this.Controls.Add(this.buttonShow);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
@@ -608,23 +652,23 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerNgaySinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabCNTT;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtVanHocHD;
+        private System.Windows.Forms.TextBox txtVanhocCD;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtQuangHoc;
+        private System.Windows.Forms.TextBox txtCoHoc;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtVLHatNhan;
+        private System.Windows.Forms.TextBox txtDien;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtSQL;
+        private System.Windows.Forms.TextBox txtC;
+        private System.Windows.Forms.TextBox txtPascal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -641,5 +685,9 @@
         private System.Windows.Forms.ToolStripMenuItem cậpNhậtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bỏCậpNhậtToolStripMenuItem;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.CheckedListBox checkedListBoxCapNhatDiem;
+        private System.Windows.Forms.Button btnLuuDiem;
+        private System.Windows.Forms.Label labelMSV;
+        private System.Windows.Forms.TextBox txtMSV;
     }
 }
